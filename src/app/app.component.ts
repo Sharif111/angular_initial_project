@@ -14,9 +14,23 @@ export class AppComponent {
   }
   obj=
   {
-    name:'sharif',
-    age:'25'
+    age:'26'
   }
-  arr=['peter','sunny','helen']
+  arr=['Dhaka','Bogura','Rangpur']
+  getfun(name:string)
+  {
+    alert(name)
+  }
+  myName="Khokon"
+  myEvent(evt:string)
+  {
+    console.warn(evt)
+  }
+  currentVal="";
+  getVal(val:string)
+  {
+    console.warn(val)
+    this.currentVal=val
+  }
 
 }

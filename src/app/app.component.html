@@ -1,23 +1,18 @@
 <div style="text-align:center">  
-  <h1>  
-     {{ appName }}  
-  </h1> 
-  <h1>
-    {{getName()}}
-  </h1> 
-  <h1>
-    {{obj.name}}
-  </h1>
-  <h1>
-    {{obj.age}}
-  </h1>
-  <h1>
-    {{arr}}
-  </h1>
-  <h1>
-    {{arr[0]}}
-  </h1>
+  <h4>{{ appName }}  </h4> 
+  <h4>{{getName()}} </h4> 
+  <h4>{{obj.age}}</h4>  
+  <h4>{{arr[0]}}</h4>
   <app-login></app-login>
-  <app-signup></app-signup>
+  <h4>
+    <button (click)="getfun(myName)">Get My Name</button>
+  </h4>
+  <button (click)="myEvent('This is click event')">Click Me</button><br><br>
+  <input type="text" (keyup)="myEvent('This is key up')"/><br><br>
+  <input type="text" #box (keyup)="myEvent(box.value)"/><br><br>
+  <input type="text" #box (keyup.enter)="myEvent(box.value)"/><br><br>
+  <input type="text" #box (blur)="myEvent('blur event')"/><br><br>
+  <input type="text" #box (keyup)="getVal($event.target.value)"/>
+  <h2>{{currentVal}}</h2>
 </div>  
  
